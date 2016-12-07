@@ -11,7 +11,7 @@ class Hello {
     }
 
     public init() : void {
-        var canvas = document.getElementById("canvas");
+        var canvas = <HTMLCanvasElement>document.getElementById("canvas");
         if (canvas === null)
         {
             console.log("canvas is null");
@@ -73,7 +73,7 @@ class Hello {
     }
 
     public createShader(id) : void {
-        var canvas = document.getElementById("canvas");
+        var canvas = <HTMLCanvasElement>document.getElementById("canvas");
         var gl = canvas.getContext("webgl");
         var shader;
         var scriptElement = document.getElementById(id);
@@ -106,7 +106,7 @@ class Hello {
     }
 
     public createProgram(vs, fs) {
-        var canvas = document.getElementById("canvas");
+        var canvas = <HTMLCanvasElement>document.getElementById("canvas");
         var gl = canvas.getContext("webgl");
 
         var program = gl.createProgram();
@@ -124,7 +124,7 @@ class Hello {
     }
 
     public createVbo(data) : void {
-        var canvas = document.getElementById("canvas");
+        var canvas = <HTMLCanvasElement>document.getElementById("canvas");
         var gl = canvas.getContext("webgl");
         var vbo = gl.createBuffer();
 
